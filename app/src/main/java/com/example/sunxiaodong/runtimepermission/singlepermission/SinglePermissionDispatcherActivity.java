@@ -25,7 +25,7 @@ import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
 /**
- * 使用PermissionDispatcher处理单个权限请求
+ * 使用PermissionDispatcher处理一次单个权限请求
  * Created by sunxiaodong on 16/4/26.
  */
 @RuntimePermissions

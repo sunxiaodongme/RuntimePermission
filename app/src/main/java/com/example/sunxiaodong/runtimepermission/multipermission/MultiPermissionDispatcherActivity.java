@@ -25,6 +25,7 @@ import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
 /**
+ * 使用PermissionDispatcher处理一次多个权限请求
  * Created by sunxiaodong on 16/4/26.
  */
 @RuntimePermissions
@@ -65,27 +66,22 @@ public class MultiPermissionDispatcherActivity extends AppCompatActivity impleme
 
     @OnShowRationale({Manifest.permission.CAMERA, Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS})
     void showRationaleForCamera(PermissionRequest request) {
-        // NOTE: Show a rationale to explain why the permission is needed, e.g. with a dialog.
-        // Call proceed() or cancel() on the provided PermissionRequest to continue or abort
-        showRationaleDialog(R.string.permission_rationale, request);
+        showRationaleDialog(R.string.permission_camera_contacts_rationale, request);
     }
 
     @OnPermissionDenied({Manifest.permission.CAMERA, Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS})
     void onCameraDenied() {
-        // NOTE: Deal with a denied permission, e.g. by showing specific UI
-        // or disabling certain functionality
         Toast.makeText(this, R.string.permission_denied, Toast.LENGTH_SHORT).show();
     }
 
     @OnNeverAskAgain({Manifest.permission.CAMERA, Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS})
     void onCameraNeverAskAgain() {
-        Toast.makeText(this, R.string.permission_camera_never_askagain, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.permission_never_askagain, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        // NOTE: delegate the permission handling to generated method
         MultiPermissionDispatcherActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
     }
 

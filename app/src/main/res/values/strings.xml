@@ -1,14 +1,22 @@
 <resources>
     <string name="app_name">RuntimePermission</string>
 
-    <string name="permission_camera_rationale">应用需要相机权限才能使用该功能</string>
-    <string name="permission_camera_denied">您拒绝了访问相机!</string>
-    <string name="permission_camera_never_askagain">您不允许再次请求相机权限!</string>
-
     <string name="button_allow">允许</string>
     <string name="button_deny">拒绝</string>
 
-    <string name="permission_rationale">需要访问%s</string>
-    <string name="permission_denied">某些权限被拒绝</string>
+    <!-- SingleNormalActivity -->
+    <string name="permission_camera_rationale">需要相机权限才能使用该功能</string>
+    <string name="permission_camera_denied">您拒绝了授予相机权限，该功能不可用!</string>
+
+    <!-- MultiNormalActivity -->
+    <string name="permission_rationale">需要%s权限才能使用该功能</string>
+    <string name="permission_denied">某些权限被拒绝，该功能不可用!</string>
+
+    <!-- SinglePermissionDispatcherActivity -->
+    <string name="permission_camera_never_askagain">不再允许询问相机权限，该功能不可用!</string>
+
+    <!-- MultiPermissionDispatcherActivity -->
+    <string name="permission_camera_contacts_rationale">需要相机和联系人权限才能使用该功能</string>
+    <string name="permission_never_askagain">不再允许询问授权，该功能不可用!</string>
 
 </resources>
