@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/go_single_normal"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:text="常规的单权限请求"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/go_single_pd"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="使用pd库的单权限请求"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/go_multi_normal"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="常规的多权限请求"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/go_multi_pd"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="使用pd库的多权限请求"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</RelativeLayout>
